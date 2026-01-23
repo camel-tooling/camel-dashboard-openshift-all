@@ -18,6 +18,9 @@ keywords:
   - console
   - integration
   - hawtio
+  - jolokia
+  - jmx
+  - openshift
 maintainers:
   - name: gfournier
     email: gfournier@apache.org

@@ -1,6 +1,16 @@
-# Camel Dashboard OpenShift All
+<h1 align="center">
+  <a href="https://camel-tooling.github.io/camel-dashboard/">Camel Dashboard Openshift Helm Chart</a>
+</h1>
 
-Camel Dashboard All-in-One Helm Chart for Openshift
+<p align=center>
+  <a href="https://github.com/camel-tooling/camel-dashboard/blob/main/LICENSE"><img src="https://img.shields.io/github/license/camel-tooling/camel-dashboard-operator?color=104d92&style=for-the-badge" alt="License"/></a>
+  <a href="https://camel-tooling.github.io/camel-dashboard/"><img src="https://img.shields.io/badge/Documentation-Camel_Dashboard-white?color=cf7428&style=for-the-badge" alt="Visit"/></a>
+</p><br/>
+
+> [!WARNING] 
+> This Helm chart is a work in progress
+
+<h2 align="center">Camel Dashboard All-in-One Helm Chart for Openshift</h2>
 
 
 This is an umbrella Helm chart that deploys the complete Camel Dashboard solution, including:
@@ -10,19 +20,25 @@ This is an umbrella Helm chart that deploys the complete Camel Dashboard solutio
 
 ## Prerequisites
 
+- Kubernetes
+- Helm
 - OpenShift 4.19+
 
-## Installation procedure
+## Installation
 
-Add repository
-```
+### 1. Add the Helm Repository
+
+```bash
 helm repo add camel-dashboard https://camel-tooling.github.io/camel-dashboard/charts
+helm repo update
 ```
 
-Install chart
+### 2. Install the Chart
+
+```bash
+helm install camel-dashboard-openshift-all camel-dashboard/camel-dashboard-openshift-all -n camel-dashboard --create-namespace
 ```
-$ helm install camel-dashboard-openshift-all camel-dashboard/camel-dashboard-openshift-all -n camel-dashboard --create-namespace
-```
+
 
 ### 3. Customizing Installation
 
@@ -32,7 +48,11 @@ You can customize the installation by providing your own values:
 helm install camel-dashboard-openshift-all camel-dashboard/camel-dashboard-openshift-all -n camel-dashboard --create-namespace -f my-values.yaml
 ```
 
-For more installation configuration on the Camel Dashboard please see the [installation documentation](https://camel-tooling.github.io/camel-dashboard/docs/installation-guide/).
+## Uninstalling
+
+```bash
+helm uninstall camel-dashboard-openshift-all -n camel-dashboard
+```
 
 
 ## More Information

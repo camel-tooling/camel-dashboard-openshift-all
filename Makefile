@@ -40,7 +40,7 @@ endif
 helm-check: helm
 	@echo "####### Checking helm chart ..."
 	helm dependency update
-	helm lint . --set hawtio-online-console-plugin.enabled=false
+	helm lint . --set hawtio-online-console-plugin.mockProxySecret=true
 
 .PHONY: helm-check
 

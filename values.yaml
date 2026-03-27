@@ -12,7 +12,7 @@ camel-dashboard-console:
   enabled: true
   plugin:
     name: camel-dashboard-console
-    image: quay.io/camel-tooling/camel-dashboard-console:0.3.2
+    image: quay.io/camel-tooling/camel-dashboard-console:0.4.0
 
 # Hawtio Online Console Plugin
 hawtio-online-console-plugin:
@@ -20,8 +20,8 @@ hawtio-online-console-plugin:
   plugin:
     image:
       name: quay.io/hawtio/online-console-plugin
-      tag: 0.6.0
+      tag: 0.7.0
   gateway:
     image:
       name: quay.io/hawtio/online-console-plugin-gateway
-      tag: 0.6.0
+      tag: 0.7.0

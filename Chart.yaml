@@ -4,9 +4,9 @@ apiVersion: v2
 name: camel-dashboard-openshift-all
 description: Helm umbrella chart for Camel Dashboard on OpenShift
 type: application
-version: 4.21.0
+version: 4.21.1
 # follows https://github.com/opdev/getocprange/blob/main/kubeOpenShiftVersionMap.yaml
-kubeVersion: ">= 1.33"
+kubeVersion: ">= 1.34"
 # to change before releasing
 icon: https://raw.githubusercontent.com/camel-tooling/camel-dashboard-openshift-all/refs/heads/main/icons/logo.png
 home: https://camel-tooling.github.io/camel-dashboard/
@@ -35,7 +35,7 @@ dependencies:
     repository: "https://camel-tooling.github.io/camel-dashboard/charts"
     condition: camel-dashboard-operator.enabled
   - name: camel-dashboard-console
-    version: "0.4.0"
+    version: "0.4.1"
     repository: "https://camel-tooling.github.io/camel-dashboard/charts"
     condition: camel-dashboard-console.enabled
   - name: hawtio-online-console-plugin
